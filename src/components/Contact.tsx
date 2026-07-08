@@ -15,7 +15,7 @@ export default function Contact() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formData.name || !formData.phone) {
       setFormStatus('error');
@@ -24,11 +24,24 @@ export default function Contact() {
     
     setFormStatus('submitting');
     
-    // Simulate submission to server
-    setTimeout(() => {
+    try {
+      await fetch('https://script.google.com/macros/s/AKfycbyjzbO8jUaqP2yUmd94JCAiDR09IyH9s24F2NvFRzrcORaMJuBCN2VYiqrCq0tliMaC/exec', {
+        method: 'POST',
+        mode: 'no-cors', // Avoids CORS preflight and redirect block
+        headers: {
+          'Content-Type': 'text/plain',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      // Since mode is 'no-cors', the response is opaque. 
+      // If the request succeeds/network is up, we can assume success.
       setFormStatus('success');
       setFormData({ name: '', phone: '', message: '' });
-    }, 1500);
+    } catch (error) {
+      console.error('Error submitting appointment:', error);
+      setFormStatus('error');
+    }
   };
 
   return (
