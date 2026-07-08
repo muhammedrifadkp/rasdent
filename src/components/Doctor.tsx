@@ -16,7 +16,7 @@ export default function Doctor() {
             <div className="doctor-image-wrapper">
               <div className="doctor-avatar-blob">
                 <Image 
-                  src="/doctor_rashida.png" 
+                  src="/doctor_rashida.webp" 
                   alt="Dr. Rashida Ajeeb - Lead Dentist at Rasdent Clinic" 
                   width={280}
                   height={280}

@@ -1,20 +1,30 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 export default function About() {
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
   return (
     <section id="about" className="about-section section-padding">
       <div className="container about-grid">
         <div className="about-image-area">
-          <div className="about-card-blob blob-frame-alt">
-            <div className="logo-badge-container">
-              <Image 
-                src="/logo_variant.jpg" 
-                alt="Rasdent Logo Variant" 
-                width={200} 
-                height={106} 
-                className="about-logo-img"
-              />
+          <div className="about-card-blob" onClick={() => setIsLightboxOpen(true)}>
+            <Image 
+              src="/logo_variant.webp" 
+              alt="Rasdent Clinic Poster - Click to Expand" 
+              width={520} 
+              height={252} 
+              className="about-logo-img"
+              style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+              priority
+            />
+            <div className="about-poster-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" width="20" height="20">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.602 10.602Z" />
+              </svg>
+              <span>Click to view poster</span>
             </div>
           </div>
         </div>
@@ -56,7 +66,22 @@ export default function About() {
         </div>
       </div>
 
-      
+      {/* Lightbox Modal */}
+      {isLightboxOpen && (
+        <div className="lightbox-overlay" onClick={() => setIsLightboxOpen(false)}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button className="lightbox-close" onClick={() => setIsLightboxOpen(false)} aria-label="Close lightbox">×</button>
+            <Image 
+              src="/logo_variant.webp" 
+              alt="Rasdent Clinic Poster - Full Size" 
+              width={1200} 
+              height={580} 
+              className="lightbox-img"
+              unoptimized
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

@@ -4,6 +4,10 @@ import Image from 'next/image';
 export default function Hero() {
   return (
     <section id="hero" className="hero-section gradient-bg-teal-mint bg-pattern section-padding">
+      {/* Background glow mesh gradient circles */}
+      <div className="hero-glow-circle hero-glow-circle-1"></div>
+      <div className="hero-glow-circle hero-glow-circle-2"></div>
+
       <div className="container hero-grid">
         <div className="hero-content">
           <span className="badge">
@@ -21,27 +25,37 @@ export default function Hero() {
           </p>
           <div className="hero-ctas">
             <a href="tel:9645465005" className="btn btn-primary btn-call">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
                 <path fillRule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.18.282-.108.43a13.547 13.547 0 0 0 5.605 5.605c.149.072.33.027.43-.108l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clipRule="evenodd" />
               </svg>
-              Call to Book: 9645 465 005
+              <span>Call to Book: 9645 465 005</span>
             </a>
-            <a href="#services" className="btn btn-secondary">
-              Explore Services
+            <a href="#services" className="btn btn-secondary btn-explore">
+              <span>Explore Services</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" width="16" height="16">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
             </a>
           </div>
-          <div className="hero-features-subtle">
-            <div className="subtle-feature">
-              <span className="subtle-dot"></span>
+          
+          <div className="hero-features-chips">
+            <div className="feature-chip">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" className="chip-check-icon">
+                <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clipRule="evenodd" />
+              </svg>
               <span>Advanced Orthodontics</span>
             </div>
-            <div className="subtle-feature">
-              <span className="subtle-dot"></span>
+            <div className="feature-chip">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" className="chip-check-icon">
+                <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clipRule="evenodd" />
+              </svg>
               <span>Multi-Speciality Care</span>
             </div>
-            <div className="subtle-feature">
-              <span className="subtle-dot"></span>
-              <span>Pediatric dentistry</span>
+            <div className="feature-chip">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" className="chip-check-icon">
+                <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clipRule="evenodd" />
+              </svg>
+              <span>Pediatric Dentistry</span>
             </div>
           </div>
         </div>
@@ -57,9 +71,10 @@ export default function Hero() {
               <path d="M12 0l3.059 8.941 8.941 3.059-8.941 3.059-3.059 8.941-3.059-8.941-8.941-3.059 8.941-3.059z" />
             </svg>
           </div>
+          
           <div className="image-blob-container blob-frame">
             <Image 
-              src="/clinic_hero.png" 
+              src="/clinic_hero.webp" 
               alt="Happy Smiling Family at Rasdent Multi-Speciality Clinic" 
               width={500}
               height={500}
@@ -67,10 +82,21 @@ export default function Hero() {
               className="hero-img-element"
             />
           </div>
+
+          {/* Floating interactive stats card */}
+          <div className="floating-stats-card">
+            <div className="stats-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--primary-teal)" width="20" height="20" className="stats-heart-icon">
+                <path d="m11.645 20.91-.007-.003-.003-.001a3.797 3.797 0 0 1-.945-.632 17.68 17.68 0 0 1-3.66-3.834C4.833 13.565 3 10.457 3 7.375 3 4.437 5.165 2.25 8.12 2.25c1.767 0 3.167.892 3.88 2.052.713-1.16 2.113-2.052 3.88-2.052 2.955 0 5.12 2.187 5.12 5.125 0 3.082-1.833 6.19-4.132 9.267a17.678 17.678 0 0 1-3.66 3.834 3.79 3.79 0 0 1-.945.632l-.003.001-.007.003-.01.002-.008-.002Z" />
+              </svg>
+            </div>
+            <div className="stats-info">
+              <span className="stats-number">10k+</span>
+              <span className="stats-label">Happy Smiles</span>
+            </div>
+          </div>
         </div>
       </div>
-
-      
     </section>
   );
 }

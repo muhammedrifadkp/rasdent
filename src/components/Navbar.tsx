@@ -19,6 +19,17 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const navLinks = [
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
@@ -44,7 +55,7 @@ export default function Navbar() {
       <div className="container nav-container">
         <a href="#hero" onClick={(e) => handleLinkClick(e, '#hero')} className="nav-logo">
           <Image 
-            src="/navlogo_transparent.png" 
+            src="/navlogo_transparent.webp" 
             alt="Rasdent Clinic Logo" 
             width={244} 
             height={45} 
