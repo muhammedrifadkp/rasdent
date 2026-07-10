@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://rasdent.com/sitemap.xml',
+    sitemap: 'https://www.rasdent.in/sitemap.xml',
   };
 }

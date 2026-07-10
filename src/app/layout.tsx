@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     "Smile Care Kuttiady"
   ],
   authors: [{ name: "Rasdent Clinic" }],
-  metadataBase: new URL("https://rasdent.com"), // Fallback base URL for metadata
+  metadataBase: new URL("https://www.rasdent.in"), // Fallback base URL for metadata
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Rasdent Multi-Speciality Dental Clinic | A Reason to Smile",
     description: "Experience modern, advanced dental care at Rasdent Multi-Speciality Dental Clinic on Calicut Road, Kuttiady. Complete smile solutions for you and your family.",
-    url: "https://rasdent.com",
+    url: "https://www.rasdent.in",
     siteName: "Rasdent Multi-Speciality Dental Clinic",
     images: [
       {
@@ -58,7 +58,10 @@ export const metadata: Metadata = {
     images: ["/icon-512.png"],
   },
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png", sizes: "192x192" }
+    ],
     shortcut: "/favicon.png",
     apple: "/icon-512.png",
   },
@@ -72,7 +75,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sora.variable} ${plusJakartaSans.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192" />
       </head>
       <body>{children}</body>
     </html>

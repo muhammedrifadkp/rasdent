@@ -7,9 +7,9 @@ export default function JsonLd() {
     "name": "Rasdent Multi-Speciality Dental Clinic",
     "alternateName": "Rasdent Clinic",
     "description": "Rasdent Multi-Speciality Dental Clinic in Kuttiady offers advanced, complete smile solutions, cosmetic dentistry, orthodontics, root canals, and pediatric care. A Reason to Smile.",
-    "url": "https://rasdent.com",
-    "logo": "https://rasdent.com/logo_horizontal.png",
-    "image": "https://rasdent.com/icon-512.png",
+    "url": "https://www.rasdent.in",
+    "logo": "https://www.rasdent.in/logo_horizontal.png",
+    "image": "https://www.rasdent.in/icon-512.png",
     "telephone": "+91 96454 65005",
     "address": {
       "@type": "PostalAddress",
