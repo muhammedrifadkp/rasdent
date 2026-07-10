@@ -17,8 +17,11 @@ export default function Hero() {
             Now in Kuttiady
           </span>
           <h1 className="hero-title">
-            We Give You <br />
-            <span className="gradient-text-teal-green">A Reason to Smile</span>
+            <span className="hero-pretitle">Rasdent Multi-Speciality Dental Clinic in Kuttiady</span>
+            <span className="hero-main-title">
+              We Give You <br />
+              <span className="gradient-text-teal-green">A Reason to Smile</span>
+            </span>
           </h1>
           <p className="hero-description">
             Experience complete smile solutions and advanced dental treatments at Rasdent Multi-Speciality Dental Clinic. We combine cutting-edge technology with a warm, caring environment to give you the perfect smile.

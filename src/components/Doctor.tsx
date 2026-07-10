@@ -7,7 +7,7 @@ export default function Doctor() {
       <div className="container">
         <div className="doctor-header text-center">
           <span className="badge">Meet the Doctor</span>
-          <h2 className="doctor-title">Our Chief Specialist</h2>
+          <h2 className="doctor-title">Chief Dentist & Specialist in Kuttiady</h2>
           <p className="doctor-subtitle">Dedicated to providing personalized care and creating beautiful, healthy smiles.</p>
         </div>
 
@@ -32,9 +32,9 @@ export default function Doctor() {
 
             <div className="doctor-info">
               <span className="doctor-role">Clinical Director & Chief Dentist</span>
-              <h3 className="doctor-name">Dr. Rashida T, BDS</h3>
+              <h3 className="doctor-name">Dr. Rashida Ajeeb, BDS</h3>
               <p className="doctor-bio">
-                Dr. Rashida T is the founder and lead dentist of **Rasdent Multi-Speciality Dental Clinic**. Believing that dental care should be restorative, preventative, and beautiful, she specializes in aesthetic smile design, advanced endodontics, and pediatric care. 
+                Dr. Rashida Ajeeb is the founder and lead dentist of **Rasdent Multi-Speciality Dental Clinic**. Believing that dental care should be restorative, preventative, and beautiful, she specializes in aesthetic smile design, advanced endodontics, and pediatric care in Kuttiady. 
               </p>
               <p className="doctor-bio-secondary">
                 With a gentle approach and a reassuring presence, she excels at helping nervous patients and children feel completely at ease. Under her leadership, Rasdent is dedicated to delivering high-quality dental solutions, ensuring every patient leaves with a confident reason to smile.

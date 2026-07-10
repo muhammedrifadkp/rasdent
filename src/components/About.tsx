@@ -33,10 +33,10 @@ export default function About() {
           <span className="badge">About the Clinic</span>
           <h2 className="about-title">Providing World-Class Dental Care in Kuttiady</h2>
           <p className="about-paragraph text-highlight">
-            Rasdent Multi-Speciality Dental Clinic is a modern, state-of-the-art facility dedicated to delivering complete smile solutions under one roof. Located on Calicut Road, Kuttiady, we focus on patient comfort, safety, and visual beauty.
+            Rasdent Multi-Speciality Dental Clinic is widely recognized as the best dental clinic in Kuttiady, Kozhikode. Under the expert leadership of Chief Dentist Dr. Rashida Ajeeb, we provide advanced smile solutions, digital orthodontics, and complete family dental care.
           </p>
           <p className="about-paragraph">
-            Our clinic is equipped with the latest advancements in digital dentistry, enabling highly accurate diagnoses and painless treatments. Whether you need a simple check-up or a complex smile makeover, our team provides personalized care tailored to your unique needs. We believe that everyone deserves a healthy, confident smile—which is why our tagline is <strong>&quot;A Reason to Smile&quot;</strong>.
+            Our state-of-the-art facility is equipped with the latest advancements in digital dentistry, enabling highly accurate diagnoses and painless root canals, implants, and laser treatments. Whether you are looking for an experienced dentist in Kuttiady for routine care or a full smile makeover, our dedicated team ensures the highest standard of hygiene and patient safety. We believe that everyone deserves a healthy, confident smile—which is why our tagline is <strong>&quot;A Reason to Smile&quot;</strong>.
           </p>
 
           <div className="about-features-grid">
@@ -47,7 +47,7 @@ export default function About() {
                 </svg>
               </div>
               <div className="feature-text-wrapper">
-                <h4>Full Spectrum Treatments</h4>
+                <h3>Full Spectrum Treatments</h3>
                 <p>From cleanings to advanced surgeries and cosmetic makeovers.</p>
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function About() {
                 </svg>
               </div>
               <div className="feature-text-wrapper">
-                <h4>Ultra-Sterile Hygiene</h4>
+                <h3>Ultra-Sterile Hygiene</h3>
                 <p>We maintain international protocols for sterilization and safety.</p>
               </div>
             </div>

@@ -65,7 +65,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div className="detail-text">
-                  <h4>Address</h4>
+                  <h3>Address</h3>
                   <p>Calicut Road, Kuttiady, Kerala 673508</p>
                   <a 
                     href="https://www.google.com/maps/place/Rasdent-+Dental+Clinic/@11.6513212,75.7524891,853m/data=!3m1!1e3!4m6!3m5!1s0x3ba67fb212f31f3b:0x36155a2eb4939f84!8m2!3d11.6346414!4d75.7385459!16s%2Fg%2F11zcs1yxdf?entry=ttu&g_ep=EgoyMDI2MDcwNS4wIKXMDSoASAFQAw%3D%3D"
@@ -85,7 +85,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div className="detail-text">
-                  <h4>Phone</h4>
+                  <h3>Phone</h3>
                   <p><a href="tel:9645465005" className="link-hover">9645 465 005</a></p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div className="detail-text">
-                  <h4>Email</h4>
+                  <h3>Email</h3>
                   <p><a href="mailto:rasdent.dental@gmail.com" className="link-hover">rasdent.dental@gmail.com</a></p>
                 </div>
               </div>
