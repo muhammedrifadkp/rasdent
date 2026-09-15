@@ -724,201 +724,6 @@ a {
   font-weight: 600;
   color: var(--slate);
 }
-
-
-/* ==========================================
-   Styles from Countdown.tsx
-   ========================================== */
-.countdown-section {
-          background-color: var(--cream);
-          border-top: 1px solid rgba(237, 177, 57, 0.15);
-          border-bottom: 1px solid rgba(237, 177, 57, 0.15);
-          position: relative;
-        }
-
-        .countdown-container {
-          max-width: 800px;
-          margin: 0 auto;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .countdown-title {
-          margin-bottom: 12px;
-          font-size: 32px;
-        }
-
-        .countdown-subtitle {
-          color: var(--slate);
-          max-width: 540px;
-          margin: 0 auto 40px auto;
-          font-size: 16px;
-        }
-
-        .timer-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 20px;
-          width: 100%;
-          margin-bottom: 40px;
-        }
-
-        .timer-card-blob {
-          background-color: #ffffff;
-          border: 2px solid var(--primary-teal);
-          border-radius: 60% 40% 50% 50% / 50% 50% 40% 60%;
-          padding: 24px 16px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          aspect-ratio: 1;
-          box-shadow: var(--shadow-md);
-          animation: blob-wobble 10s ease-in-out infinite alternate;
-        }
-
-        .timer-card-blob:nth-child(even) {
-          border-color: var(--gold);
-          border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
-          animation-delay: 2s;
-        }
-
-        @keyframes blob-wobble {
-          0% {
-            border-radius: 60% 40% 50% 50% / 50% 50% 40% 60%;
-          }
-          100% {
-            border-radius: 50% 50% 60% 40% / 40% 60% 50% 50%;
-          }
-        }
-
-        .timer-val {
-          font-family: 'Sora', sans-serif;
-          font-size: 40px;
-          font-weight: 800;
-          color: var(--dark-navy);
-          line-height: 1;
-          margin-bottom: 4px;
-        }
-
-        .timer-card-blob:nth-child(odd) .timer-val {
-          color: var(--primary-teal);
-        }
-
-        .timer-card-blob:nth-child(even) .timer-val {
-          color: var(--gold);
-        }
-
-        .timer-label {
-          font-family: 'Plus Jakarta Sans', sans-serif;
-          font-size: 13px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          color: var(--slate);
-        }
-
-        .open-announcement-blob {
-          background: linear-gradient(135deg, var(--primary-teal) 0%, var(--deep-green) 100%);
-          border-radius: var(--border-radius-lg);
-          padding: 48px;
-          text-align: center;
-          color: #ffffff;
-          width: 100%;
-          box-shadow: var(--shadow-lg);
-          margin-bottom: 40px;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .open-announcement-blob h3 {
-          color: #ffffff;
-          font-size: 28px;
-          margin-bottom: 12px;
-        }
-
-        .open-announcement-blob p {
-          color: rgba(255, 255, 255, 0.9);
-          margin-bottom: 24px;
-          font-size: 18px;
-        }
-
-        .open-badge {
-          display: inline-block;
-          background-color: var(--gold);
-          color: var(--dark-navy);
-          padding: 8px 20px;
-          border-radius: 100px;
-          font-weight: 700;
-          font-family: 'Sora', sans-serif;
-          margin-bottom: 20px;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-          0% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(237, 177, 57, 0.4);
-          }
-          70% {
-            transform: scale(1.05);
-            box-shadow: 0 0 0 10px rgba(237, 177, 57, 0);
-          }
-          100% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(237, 177, 57, 0);
-          }
-        }
-
-        .event-details-card {
-          background-color: #ffffff;
-          border: 1px solid rgba(0, 167, 158, 0.1);
-          border-radius: var(--border-radius-md);
-          padding: 24px 32px;
-          display: flex;
-          justify-content: space-around;
-          width: 100%;
-          box-shadow: var(--shadow-sm);
-        }
-
-        .event-detail-item {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-
-        .event-icon {
-          font-size: 20px;
-        }
-
-        .event-text {
-          font-family: 'Sora', sans-serif;
-          font-weight: 600;
-          font-size: 15px;
-          color: var(--dark-navy);
-        }
-
-        @media (max-width: 768px) {
-          .timer-grid {
-            gap: 12px;
-          }
-          .timer-val {
-            font-size: 28px;
-          }
-          .timer-label {
-            font-size: 11px;
-          }
-          .event-details-card {
-            flex-direction: column;
-            gap: 16px;
-            padding: 20px;
-          }
-        }
-
-
 /* ==========================================
    Styles from About.tsx
    ========================================== */
@@ -1265,163 +1070,302 @@ a {
 
 
 /* ==========================================
-   Styles from Doctor.tsx
+   Styles from Doctor.tsx (Multi-doctor Speciality Grid)
    ========================================== */
 .doctor-section {
-          background-color: var(--cream);
-          border-top: 1px solid rgba(0, 167, 158, 0.08);
-          border-bottom: 1px solid rgba(0, 167, 158, 0.08);
-        }
+  background-color: var(--cream);
+  border-top: 1px solid rgba(0, 167, 158, 0.08);
+  border-bottom: 1px solid rgba(0, 167, 158, 0.08);
+}
 
-        .doctor-header {
-          margin-bottom: 60px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
+.doctor-header {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-        .doctor-title {
-          font-size: 36px;
-          margin-bottom: 16px;
-        }
+.doctor-title {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
 
-        .doctor-subtitle {
-          color: var(--slate);
-          max-width: 600px;
-          font-size: 16px;
-        }
+.doctor-subtitle {
+  color: var(--slate);
+  max-width: 600px;
+  font-size: 16px;
+}
 
-        .doctor-card-container {
-          max-width: 900px;
-          margin: 0 auto;
-        }
+.chief-doctor-container {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+}
 
-        .doctor-profile-card {
-          background-color: #ffffff;
-          border: 1px solid rgba(0, 167, 158, 0.1);
-          border-radius: var(--border-radius-lg);
-          padding: 48px;
-          display: grid;
-          grid-template-columns: 300px 1fr;
-          gap: 48px;
-          align-items: center;
-          box-shadow: var(--shadow-md);
-        }
+.doctor-profile-card.chief-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 167, 158, 0.1);
+  border-radius: var(--border-radius-lg);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+}
 
-        .doctor-image-wrapper {
-          position: relative;
-          justify-self: center;
-        }
+.doctor-image-wrapper {
+  position: relative;
+  justify-self: center;
+}
 
-        .doctor-avatar-blob {
-          width: 280px;
-          height: 280px;
-          position: relative;
-          border-radius: 65% 35% 55% 45% / 45% 55% 35% 65%;
-          overflow: hidden;
-          background: linear-gradient(135deg, var(--primary-teal) 0%, var(--light-mint) 100%);
-          border: 4px solid #ffffff;
-          box-shadow: var(--shadow-md);
-          animation: doctor-blob-bounce 10s ease-in-out infinite;
-        }
+.doctor-avatar-blob {
+  width: 260px;
+  height: 260px;
+  position: relative;
+  border-radius: 65% 35% 55% 45% / 45% 55% 35% 65%;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--light-mint) 100%);
+  border: 4px solid #ffffff;
+  box-shadow: var(--shadow-md);
+  animation: doctor-blob-bounce 10s ease-in-out infinite;
+}
 
-        @keyframes doctor-blob-bounce {
-          0%, 100% {
-            border-radius: 65% 35% 55% 45% / 45% 55% 35% 65%;
-          }
-          50% {
-            border-radius: 45% 55% 35% 65% / 55% 45% 65% 35%;
-          }
-        }
+@keyframes doctor-blob-bounce {
+  0%, 100% {
+    border-radius: 65% 35% 55% 45% / 45% 55% 35% 65%;
+  }
+  50% {
+    border-radius: 45% 55% 35% 65% / 55% 45% 65% 35%;
+  }
+}
 
-        .doctor-avatar-img {
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
-          transform: scale(1.02);
-        }
+.doctor-avatar-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.02);
+}
 
-        .doctor-sparkle-1 {
-          position: absolute;
-          top: -10px;
-          right: -10px;
-          z-index: 10;
-        }
+.doctor-sparkle-1 {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 10;
+}
 
-        .doctor-info {
-          display: flex;
-          flex-direction: column;
-        }
+.doctor-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-        .doctor-role {
-          font-family: 'Sora', sans-serif;
-          font-weight: 700;
-          font-size: 13px;
-          color: var(--primary-teal);
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          margin-bottom: 8px;
-        }
+.chief-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold) 0%, #D4921D 100%);
+  color: #ffffff;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
 
-        .doctor-name {
-          font-size: 28px;
-          color: var(--dark-navy);
-          margin-bottom: 16px;
-        }
+.doctor-name {
+  font-size: 32px;
+  color: var(--dark-navy);
+  margin-bottom: 4px;
+}
 
-        .doctor-bio {
-          font-size: 15.5px;
-          color: var(--slate);
-          line-height: 1.6;
-          margin-bottom: 16px;
-        }
+.doctor-credentials {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-teal);
+  margin-bottom: 18px;
+}
 
-        .doctor-bio-secondary {
-          font-size: 14.5px;
-          color: var(--slate);
-          line-height: 1.6;
-          margin-bottom: 24px;
-        }
+.doctor-bio {
+  font-size: 15.5px;
+  color: var(--slate);
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
 
-        .doctor-socials {
-          display: flex;
-          gap: 16px;
-        }
+.btn-view-board {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary-teal);
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--deep-green) 100%);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--border-radius-sm);
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 167, 158, 0.2);
+  transition: var(--transition-smooth);
+}
 
-        .doctor-insta-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-          color: #ffffff;
-          padding: 12px 24px;
-          border-radius: 100px;
-          font-family: 'Sora', sans-serif;
-          font-weight: 600;
-          font-size: 14px;
-          box-shadow: 0 4px 12px rgba(220, 39, 67, 0.25);
-          transition: var(--transition-smooth);
-        }
+.btn-view-board:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 167, 158, 0.35);
+}
 
-        .doctor-insta-btn:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 16px rgba(220, 39, 67, 0.4);
-        }
+/* Specialists Grid */
+.specialists-grid-title {
+  font-size: 26px;
+  color: var(--dark-navy);
+  margin: 40px auto 30px auto;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
 
-        @media (max-width: 992px) {
-          .doctor-profile-card {
-            grid-template-columns: 1fr;
-            gap: 36px;
-            padding: 32px;
-            text-align: center;
-          }
-          .doctor-info {
-            align-items: center;
-          }
-          .doctor-socials {
-            justify-content: center;
-          }
-        }
+.specialists-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.specialist-card {
+  background-color: #ffffff;
+  border-radius: var(--border-radius-md);
+  border: 1px solid rgba(0, 167, 158, 0.08);
+  padding: 36px 30px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.specialist-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 167, 158, 0.18);
+}
+
+.specialist-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-teal) 0%, var(--gold) 100%);
+}
+
+.specialist-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 167, 158, 0.06) 0%, rgba(180, 241, 242, 0.2) 100%);
+  border: 2px solid rgba(0, 167, 158, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: inset 0 2px 4px rgba(0, 167, 158, 0.05);
+}
+
+.spec-initials {
+  font-family: 'Sora', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-teal);
+  letter-spacing: -0.05em;
+}
+
+.specialist-card:hover .specialist-icon-wrapper {
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--light-mint) 100%);
+  border-color: transparent;
+}
+
+.specialist-card:hover .spec-initials {
+  color: #ffffff;
+}
+
+.specialist-role {
+  font-family: 'Sora', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.specialist-name {
+  font-size: 20px;
+  color: var(--dark-navy);
+  margin-bottom: 6px;
+}
+
+.specialist-degrees {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--slate);
+  margin-bottom: 12px;
+}
+
+.specialist-reg {
+  font-size: 12px;
+  color: var(--slate);
+  opacity: 0.8;
+  background-color: var(--cream);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+/* Lightbox adjustment */
+.doctors-board-lightbox {
+  max-width: 650px;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.doctors-board-img {
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  border: 4px solid #ffffff;
+}
+
+@media (max-width: 992px) {
+  .doctor-profile-card.chief-card {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 32px;
+    text-align: center;
+  }
+  .doctor-info {
+    align-items: center;
+  }
+  .specialists-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .specialists-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 
         @media (max-width: 576px) {
           .doctor-title {
@@ -2823,4 +2767,145 @@ a {
     width: 160px;
     height: 160px;
   }
-}
+}
+
+/* ==========================================
+   Styles for Mission & Vision (Advanced Centered Layout)
+   ========================================== */
+.mission-vision-section {
+  background: linear-gradient(180deg, #ffffff 0%, rgba(180, 241, 242, 0.15) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.mv-section-header {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.mv-section-title {
+  font-size: 36px;
+  color: var(--dark-navy);
+  margin-top: 12px;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.mv-section-subtitle {
+  font-size: 17px;
+  color: var(--slate);
+  line-height: 1.6;
+}
+
+.mission-vision-grid.no-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mv-card-advanced {
+  background: #ffffff;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid rgba(0, 167, 158, 0.08);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.mv-card-accent {
+  height: 6px;
+  width: 100%;
+}
+
+.mission-card .mv-card-accent {
+  background: linear-gradient(90deg, var(--primary-teal) 0%, var(--deep-green) 100%);
+}
+
+.vision-card .mv-card-accent {
+  background: linear-gradient(90deg, var(--gold) 0%, #D4921D 100%);
+}
+
+.mv-card-body {
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.mv-icon-wrapper-advanced {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  transition: var(--transition-smooth);
+}
+
+.mission-card .mv-icon-wrapper-advanced {
+  background: linear-gradient(135deg, rgba(0, 167, 158, 0.1) 0%, rgba(37, 78, 40, 0.1) 100%);
+  color: var(--primary-teal);
+}
+
+.vision-card .mv-icon-wrapper-advanced {
+  background: linear-gradient(135deg, rgba(237, 177, 57, 0.15) 0%, rgba(212, 146, 29, 0.15) 100%);
+  color: var(--gold);
+}
+
+.mv-card-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--dark-navy);
+  margin-bottom: 16px;
+  font-family: 'Sora', sans-serif;
+}
+
+.mv-card-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--slate);
+  margin: 0;
+}
+
+/* Hover effects */
+.mv-card-advanced:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(54, 54, 92, 0.1);
+  border-color: rgba(0, 167, 158, 0.18);
+}
+
+.mission-card:hover .mv-icon-wrapper-advanced {
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--deep-green) 100%);
+  color: #ffffff;
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.vision-card:hover .mv-icon-wrapper-advanced {
+  background: linear-gradient(135deg, var(--gold) 0%, #D4921D 100%);
+  color: #ffffff;
+  transform: rotate(5deg) scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .mission-vision-grid.no-image {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .mv-card-body {
+    padding: 32px 24px;
+  }
+  
+  .mv-section-title {
+    font-size: 28px;
+  }
+}
+
+

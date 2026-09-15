@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Countdown from '@/components/Countdown';
 import About from '@/components/About';
+import MissionVision from '@/components/MissionVision';
 import Services from '@/components/Services';
 import Doctor from '@/components/Doctor';
 import WhyChooseUs from '@/components/WhyChooseUs';
@@ -19,8 +19,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Countdown />
         <About />
+        <MissionVision />
         <Services />
         <Doctor />
         <WhyChooseUs />

@@ -1,26 +1,77 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
+
+interface DoctorInfo {
+  name: string;
+  role: string;
+  degree: string;
+  regNo: string;
+  description?: string;
+}
+
+const specialists: DoctorInfo[] = [
+  {
+    name: "Dr. Umith K",
+    role: "Orthodontist",
+    degree: "BDS, MDS",
+    regNo: "Reg. No. 13688"
+  },
+  {
+    name: "Dr. Anagha N P",
+    role: "Periodontist",
+    degree: "BDS, MDS",
+    regNo: "Reg. No. 17794"
+  },
+  {
+    name: "Dr. Anaswara S",
+    role: "Pedodontist",
+    degree: "BDS, MDS",
+    regNo: "Reg. No. 34655"
+  },
+  {
+    name: "Dr. Femin Jamal",
+    role: "Endodontist",
+    degree: "BDS, MDS",
+    regNo: "Reg. No. 27987"
+  },
+  {
+    name: "Dr. Bineesh Balanandan",
+    role: "Implantologist",
+    degree: "BDS, MS in Implant Dentistry",
+    regNo: "Reg. No. 14400"
+  },
+  {
+    name: "Dr. Imdadm K",
+    role: "Dental Surgeon",
+    degree: "BDS",
+    regNo: "Reg. No. 17564"
+  }
+];
 
 export default function Doctor() {
   return (
     <section id="doctor" className="doctor-section section-padding bg-pattern">
       <div className="container">
         <div className="doctor-header text-center">
-          <span className="badge">Meet the Doctor</span>
-          <h2 className="doctor-title">Chief Dentist & Specialist in Kuttiady</h2>
-          <p className="doctor-subtitle">Dedicated to providing personalized care and creating beautiful, healthy smiles.</p>
+          <span className="badge">Meet Our Team</span>
+          <h2 className="doctor-title">Our Speciality Doctors</h2>
+          <p className="doctor-subtitle">A team of highly qualified specialists committed to bringing you the best in dental healthcare.</p>
         </div>
 
-        <div className="doctor-card-container">
-          <div className="doctor-profile-card">
+        {/* Chief Dentist (Highlight Card) */}
+        <div className="chief-doctor-container">
+          <div className="doctor-profile-card chief-card">
             <div className="doctor-image-wrapper">
               <div className="doctor-avatar-blob">
                 <Image 
                   src="/doctor_rashida.webp" 
-                  alt="Dr. Rashida Ajeeb - Lead Dentist at Rasdent Clinic" 
+                  alt="Dr. Rashida T - Chief Dental Surgeon" 
                   width={280}
                   height={280}
                   className="doctor-avatar-img"
+                  priority
                 />
               </div>
               <div className="doctor-sparkle-1">
@@ -31,34 +82,33 @@ export default function Doctor() {
             </div>
 
             <div className="doctor-info">
-              <span className="doctor-role">Clinical Director & Chief Dentist</span>
-              <h3 className="doctor-name">Dr. Rashida Ajeeb, BDS</h3>
+              <span className="chief-tag">Chief Dental Surgeon</span>
+              <h3 className="doctor-name">Dr. Rashida T</h3>
+              <span className="doctor-credentials">BDS | Reg. No. 19365</span>
               <p className="doctor-bio">
-                Dr. Rashida Ajeeb is the founder and lead dentist of **Rasdent Multi-Speciality Dental Clinic**. Believing that dental care should be restorative, preventative, and beautiful, she specializes in aesthetic smile design, advanced endodontics, and pediatric care in Kuttiady. 
+                Dr. Rashida T is the Chief Dental Surgeon of **Rasdent Multi-Speciality Dental Clinic**. With expert clinical leadership and a passion for advanced smile design, she leads our team in delivering pain-free, state-of-the-art family dental treatments in Kuttiady.
               </p>
-              <p className="doctor-bio-secondary">
-                With a gentle approach and a reassuring presence, she excels at helping nervous patients and children feel completely at ease. Under her leadership, Rasdent is dedicated to delivering high-quality dental solutions, ensuring every patient leaves with a confident reason to smile.
-              </p>
-
-              <div className="doctor-socials">
-                <a 
-                  href="https://www.instagram.com/dr_rashida_ajeeb" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="doctor-insta-btn"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                  </svg>
-                  <span>Follow @dr_rashida_ajeeb</span>
-                </a>
-              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      
+        {/* Specialists Grid */}
+        <h3 className="specialists-grid-title text-center">Our Domain Specialists</h3>
+        <div className="specialists-grid">
+          {specialists.map((doc, idx) => (
+            <div className="specialist-card" key={idx}>
+              <div className="specialist-accent-bar"></div>
+              <div className="specialist-icon-wrapper">
+                <span className="spec-initials">{doc.name.replace("Dr. ", "").substring(0, 2)}</span>
+              </div>
+              <span className="specialist-role">{doc.role}</span>
+              <h4 className="specialist-name">{doc.name}</h4>
+              <p className="specialist-degrees">{doc.degree}</p>
+              <span className="specialist-reg">{doc.regNo}</span>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
