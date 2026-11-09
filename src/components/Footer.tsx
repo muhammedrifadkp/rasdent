@@ -2,19 +2,10 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      const yOffset = -90; // offset for sticky navbar
-      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  };
 
   return (
     <footer className="footer-section">
@@ -30,14 +21,14 @@ export default function Footer() {
         <div className="footer-brand-area">
           <Image 
             src="/navlogo_footer.webp" 
-            alt="Rasdent Clinic Logo" 
+            alt="Rasdent Dental Clinic Logo" 
             width={300} 
             height={55} 
             className="footer-logo"
           />
           <p className="footer-tagline">&quot;A Reason to Smile&quot;</p>
           <p className="footer-description">
-            Experience premium multi-speciality dental treatments in a warm, patient-first environment. 
+            Experience premium multi-speciality dental treatments in a warm, patient-first environment in Kuttiady.
           </p>
           <div className="footer-socials">
             <a 
@@ -52,6 +43,16 @@ export default function Footer() {
               </svg>
               <span>@ras_dent</span>
             </a>
+            <a 
+              href="https://wa.me/919645465005?text=Hi%20Rasdent%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="social-icon-btn"
+              style={{ backgroundColor: 'rgba(37, 211, 102, 0.15)', color: '#25D366' }}
+              aria-label="Contact Rasdent on WhatsApp"
+            >
+              <span>WhatsApp</span>
+            </a>
           </div>
         </div>
 
@@ -59,12 +60,13 @@ export default function Footer() {
         <div className="footer-links-area">
           <h4 className="footer-title">Quick Links</h4>
           <nav className="footer-nav">
-            <a href="#about" onClick={(e) => handleLinkClick(e, '#about')}>About Clinic</a>
-            <a href="#services" onClick={(e) => handleLinkClick(e, '#services')}>Our Services</a>
-            <a href="#doctor" onClick={(e) => handleLinkClick(e, '#doctor')}>Meet The Doctor</a>
-            <a href="#why-choose-us" onClick={(e) => handleLinkClick(e, '#why-choose-us')}>Why Choose Us</a>
-            <a href="#location" onClick={(e) => handleLinkClick(e, '#location')}>Location</a>
-            <a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')}>Book Appointment</a>
+            <Link href="/#about">About Clinic</Link>
+            <Link href="/#services">Our Services</Link>
+            <Link href="/kids-dentistry">Kids Dentistry</Link>
+            <Link href="/#doctor">Meet The Doctor</Link>
+            <Link href="/#why-choose-us">Why Choose Us</Link>
+            <Link href="/#location">Location</Link>
+            <Link href="/#contact">Book Appointment</Link>
           </nav>
         </div>
 
@@ -105,7 +107,7 @@ export default function Footer() {
               </div>
               <div>
                 <strong>Working Hours</strong>
-                <p>Mon - Sat: 9:30 AM - 6:30 PM<br /><span style={{ color: 'var(--gold)', fontWeight: 600 }}>(Sun: Closed)</span></p>
+                <p>Mon - Sat: 9:00 AM - 7:00 PM<br />Sun: 9:30 AM - 6:00 PM</p>
               </div>
             </div>
           </div>

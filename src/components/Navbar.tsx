@@ -2,10 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,50 +34,54 @@ export default function Navbar() {
   }, [isOpen]);
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Doctor", href: "#doctor" },
-    { name: "Why Us", href: "#why-choose-us" },
-    { name: "Location", href: "#location" },
-    { name: "Contact", href: "#contact" }
+    { name: "About", href: "/#about" },
+    { name: "Services", href: "/#services" },
+    { name: "Kids Dentistry", href: "/kids-dentistry" },
+    { name: "Doctor", href: "/#doctor" },
+    { name: "Why Us", href: "/#why-choose-us" },
+    { name: "Location", href: "/#location" },
+    { name: "Contact", href: "/#contact" }
   ];
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
     setIsOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      const yOffset = -90; // offset for sticky navbar
-      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+    if (href.startsWith('/#') && pathname === '/') {
+      e.preventDefault();
+      const targetId = href.replace('/', '');
+      const element = document.querySelector(targetId);
+      if (element) {
+        const yOffset = -90; // offset for sticky navbar
+        const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
     }
   };
 
   return (
     <header className={`sticky-nav ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <a href="#hero" onClick={(e) => handleLinkClick(e, '#hero')} className="nav-logo">
+        <Link href="/" className="nav-logo">
           <Image 
             src="/navlogo_transparent.webp" 
-            alt="Rasdent Clinic Logo" 
+            alt="Rasdent Dental Clinic Logo" 
             width={244} 
             height={45} 
             priority
             className="logo-img"
           />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="desktop-menu">
           {navLinks.map((link) => (
-            <a 
+            <Link
               key={link.name} 
               href={link.href} 
               onClick={(e) => handleLinkClick(e, link.href)}
-              className="nav-link"
+              className={`nav-link ${pathname === link.href ? 'active' : ''}`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -85,9 +92,9 @@ export default function Navbar() {
             </svg>
             <span>9645 465 005</span>
           </a>
-          <a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')} className="btn btn-primary nav-btn">
+          <Link href="/#contact" onClick={(e) => handleLinkClick(e, '/#contact')} className="btn btn-primary nav-btn">
             Book Appointment
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -106,14 +113,14 @@ export default function Navbar() {
       <div className={`mobile-drawer ${isOpen ? 'open' : ''}`}>
         <nav className="mobile-nav-links">
           {navLinks.map((link) => (
-            <a 
+            <Link 
               key={link.name} 
               href={link.href} 
               onClick={(e) => handleLinkClick(e, link.href)}
               className="mobile-link"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
           <div className="mobile-drawer-actions">
             <a href="tel:9645465005" className="phone-link">
@@ -122,14 +129,12 @@ export default function Navbar() {
               </svg>
               <span>9645 465 005</span>
             </a>
-            <a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')} className="btn btn-primary w-full">
+            <Link href="/#contact" onClick={(e) => handleLinkClick(e, '/#contact')} className="btn btn-primary w-full">
               Book Appointment
-            </a>
+            </Link>
           </div>
         </nav>
       </div>
-
-      
     </header>
   );
 }

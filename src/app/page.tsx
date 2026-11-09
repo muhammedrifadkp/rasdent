@@ -11,6 +11,7 @@ import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
+import MobileFloatingCTA from '@/components/MobileFloatingCTA';
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <MobileFloatingCTA />
     </>
   );
 }

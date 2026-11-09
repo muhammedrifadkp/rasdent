@@ -7,7 +7,7 @@ export default function JsonLd() {
     "@id": "https://www.rasdent.in/#clinic",
     "name": "Rasdent Multi-Speciality Dental Clinic",
     "alternateName": "Rasdent Clinic",
-    "description": "Rasdent Multi-Speciality Dental Clinic in Kuttiady offers advanced, complete smile solutions, cosmetic dentistry, orthodontics, root canals, dental implants, and pediatric care. Led by Dr. Rashida Ajeeb. A Reason to Smile.",
+    "description": "Rasdent Multi-Speciality Dental Clinic in Kuttiady offers advanced, complete smile solutions, cosmetic dentistry, orthodontics, root canals, dental implants, and pediatric care. Led by Chief Dentist Dr. Rashida T (Dr. Rashida Ajeeb). A Reason to Smile.",
     "url": "https://www.rasdent.in",
     "logo": "https://www.rasdent.in/logo_horizontal.png",
     "image": [
@@ -32,19 +32,29 @@ export default function JsonLd() {
       "longitude": "75.75361"
     },
     "hasMap": "https://www.google.com/maps/place/Rasdent-+Dental+Clinic/@11.6513212,75.7524891,853m/data=!3m1!1e3!4m6!3m5!1s0x3ba67fb212f31f3b:0x36155a2eb4939f84!8m2!3d11.6346414!4d75.7385459!16s%2Fg%2F11zcs1yxdf?entry=ttu&g_ep=EgoyMDI2MDcwNS4wIKXMDSoASAFQAw%3D%3D",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "09:30",
-      "closes": "18:30"
-    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Sunday"
+        ],
+        "opens": "09:30",
+        "closes": "18:00"
+      }
+    ],
     "sameAs": [
       "https://www.instagram.com/ras_dent",
       "https://www.instagram.com/dr_rashida_ajeeb"
@@ -61,6 +71,20 @@ export default function JsonLd() {
       {
         "@type": "AdministrativeArea",
         "name": "Kerala"
+      }
+    ],
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Dr. Rashida T",
+        "jobTitle": "Chief Dental Surgeon",
+        "description": "Chief Dentist leading advanced digital dentistry, orthodontics, and smile makeovers in Kuttiady."
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Anaswara S",
+        "jobTitle": "Pedodontist (Pediatric Dentistry Specialist)",
+        "description": "Pediatric dentistry specialist providing gentle, child-friendly dental care in Kuttiady."
       }
     ],
     "knowsAbout": [
@@ -122,8 +146,8 @@ export default function JsonLd() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "MedicalProcedure",
-            "name": "Pediatric Dentistry",
-            "description": "Friendly, gentle, and welcoming kids dental care designed specifically to keep kids smiling without fear."
+            "name": "Pediatric Dentistry (Kids Dental Care)",
+            "description": "Friendly, gentle, and welcoming kids dental care, cavity prevention, and habit guidance in Kuttiady."
           }
         },
         {
