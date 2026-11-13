@@ -60,43 +60,88 @@ export default function JsonLd() {
       "https://www.instagram.com/dr_rashida_ajeeb"
     ],
     "areaServed": [
-      {
-        "@type": "AdministrativeArea",
-        "name": "Kuttiady"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Kozhikode"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Kerala"
-      }
+      { "@type": "City", "name": "Kuttiady" },
+      { "@type": "City", "name": "Kuttiyadi" },
+      { "@type": "City", "name": "Nadapuram" },
+      { "@type": "City", "name": "Kallachi" },
+      { "@type": "City", "name": "Perambra" },
+      { "@type": "City", "name": "Vadakara" },
+      { "@type": "City", "name": "Thottilpalam" },
+      { "@type": "City", "name": "Maruthonkara" },
+      { "@type": "AdministrativeArea", "name": "Kozhikode" },
+      { "@type": "AdministrativeArea", "name": "North Kerala" }
+    ],
+    "medicalSpecialty": [
+      "Orthodontics",
+      "Endodontics",
+      "Prosthodontics",
+      "Periodontics",
+      "PediatricDentistry",
+      "OralSurgery",
+      "CosmeticDentistry"
     ],
     "employee": [
       {
         "@type": "Person",
         "name": "Dr. Rashida T",
-        "jobTitle": "Chief Dental Surgeon",
-        "description": "Chief Dentist leading advanced digital dentistry, orthodontics, and smile makeovers in Kuttiady."
+        "alternateName": "Dr. Rashida Ajeeb",
+        "jobTitle": "Chief Dental Surgeon (BDS)",
+        "description": "Chief Dentist leading advanced digital dentistry, smile design, and family dental care in Kuttiady."
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Umith K",
+        "jobTitle": "Orthodontist (BDS, MDS)",
+        "description": "Specialist in clear aligners, invisible braces, ceramic braces, and jaw alignment in Kuttiady."
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Femin Jamal",
+        "jobTitle": "Endodontist (BDS, MDS)",
+        "description": "Root canal specialist delivering painless rotary and precision endodontic treatments in Kuttiady."
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Bineesh Balanandan",
+        "jobTitle": "Implantologist (BDS, MS in Implant Dentistry)",
+        "description": "Dental implant specialist for single-tooth implants, full-mouth rehabilitation, and implant-supported dentures."
       },
       {
         "@type": "Person",
         "name": "Dr. Anaswara S",
-        "jobTitle": "Pedodontist (Pediatric Dentistry Specialist)",
-        "description": "Pediatric dentistry specialist providing gentle, child-friendly dental care in Kuttiady."
+        "jobTitle": "Pedodontist (BDS, MDS)",
+        "description": "Pediatric dentistry specialist providing gentle, fear-free child dental care in Kuttiady."
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Anagha N P",
+        "jobTitle": "Periodontist (BDS, MDS)",
+        "description": "Gum care and laser periodontics specialist treating bleeding gums, periodontal pockets, and gum contouring."
+      },
+      {
+        "@type": "Person",
+        "name": "Dr. Imdadm K",
+        "jobTitle": "Dental Surgeon (BDS)",
+        "description": "Experienced dental surgeon for restorative dentistry, painless extractions, and preventive care."
       }
     ],
     "knowsAbout": [
       "Dentistry",
-      "Root Canal Treatment",
+      "Invisible Clear Aligners",
+      "Orthodontics & Braces",
+      "Painless Root Canal Treatment",
+      "Microscopic & Rotary Endodontics",
       "Dental Implants",
-      "Orthodontics",
-      "Clear Aligners",
+      "Full Mouth Rehabilitation",
+      "Digital Smile Design",
+      "Smile Correction & Veneers",
+      "Zirconia Crowns & Bridges",
       "Pediatric Dentistry",
       "Cosmetic Dentistry",
+      "Laser Dentistry",
+      "Periodontics & Gum Care",
       "Teeth Whitening",
-      "Oral Surgery"
+      "Wisdom Tooth Extraction & Oral Surgery"
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -215,10 +260,24 @@ export default function JsonLd() {
     ]
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Rasdent Multi-Speciality Dental Clinic",
+    "alternateName": ["Rasdent Dental Clinic Kuttiady", "Rasdent Kuttiyadi"],
+    "url": "https://www.rasdent.in"
+  };
+
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(dentistSchema) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dentistSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+    </>
   );
 }

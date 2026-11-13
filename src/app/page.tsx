@@ -8,6 +8,7 @@ import Doctor from '@/components/Doctor';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import BeforeAfter from '@/components/BeforeAfter';
 import Testimonials from '@/components/Testimonials';
+import FaqSection from '@/components/FaqSection';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
@@ -27,6 +28,7 @@ export default function Home() {
         <WhyChooseUs />
         <BeforeAfter />
         <Testimonials />
+        <FaqSection />
         <Contact />
       </main>
       <Footer />

@@ -67,7 +67,7 @@ export default function Doctor() {
               <div className="doctor-avatar-blob">
                 <Image 
                   src="/doctor_rashida.webp" 
-                  alt="Dr. Rashida T - Chief Dental Surgeon" 
+                  alt="Dr. Rashida T (Dr. Rashida Ajeeb) - Chief Dental Surgeon at Rasdent Dental Clinic Kuttiady" 
                   width={280}
                   height={280}
                   className="doctor-avatar-img"
@@ -83,10 +83,10 @@ export default function Doctor() {
 
             <div className="doctor-info">
               <span className="chief-tag">Chief Dental Surgeon</span>
-              <h3 className="doctor-name">Dr. Rashida T</h3>
+              <h3 className="doctor-name">Dr. Rashida T (Dr. Rashida Ajeeb)</h3>
               <span className="doctor-credentials">BDS | Reg. No. 19365</span>
               <p className="doctor-bio">
-                Dr. Rashida T is the Chief Dental Surgeon of **Rasdent Multi-Speciality Dental Clinic**. With expert clinical leadership and a passion for advanced smile design, she leads our team in delivering pain-free, state-of-the-art family dental treatments in Kuttiady.
+                Dr. Rashida T is the Chief Dental Surgeon of <strong>Rasdent Multi-Speciality Dental Clinic</strong>. With expert clinical leadership and a passion for advanced smile design, she leads our team of MDS specialists in delivering pain-free, state-of-the-art family dental treatments in Kuttiady (Kuttiyadi), Kozhikode.
               </p>
             </div>
           </div>

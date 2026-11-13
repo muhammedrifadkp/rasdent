@@ -5,7 +5,7 @@ export default function Services() {
   const serviceList = [
     {
       title: "General Dentistry",
-      description: "Routine dental check-ups, deep scaling & polishing, tooth-colored composite fillings, and simple extractions by expert dentists.",
+      description: "Routine dental check-ups, ultrasonic teeth scaling & polishing, tooth-colored composite fillings, and gentle extractions by expert dentists in Kuttiady.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="service-svg-icon">
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -13,8 +13,8 @@ export default function Services() {
       )
     },
     {
-      title: "Cosmetic Dentistry",
-      description: "Digital smile design, porcelain veneers, dental bonding, and gum contouring for visual beauty and aesthetic perfection.",
+      title: "Cosmetic Dentistry & Smile Design",
+      description: "Digital smile design, smile correction, porcelain veneers, zirconia crowns, dental bonding, and laser gum contouring for aesthetic perfection.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="service-svg-icon">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
@@ -22,8 +22,8 @@ export default function Services() {
       )
     },
     {
-      title: "Root Canal Treatment",
-      description: "Highly precise, painless root canal treatment in Kuttiady utilizing state-of-the-art endodontic rotary systems.",
+      title: "Painless Root Canal Treatment",
+      description: "High-precision, single-sitting and painless root canal treatment in Kuttiady by our MDS Endodontist using advanced rotary & magnified systems.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="service-svg-icon">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
@@ -32,8 +32,8 @@ export default function Services() {
       )
     },
     {
-      title: "Dental Implants",
-      description: "Permanent and durable titanium dental implants in Kuttiady to replace missing teeth with natural-looking crowns.",
+      title: "Dental Implants & Rehabilitation",
+      description: "Permanent titanium dental implants, implant-supported dentures, and full-mouth rehabilitation in Kuttiady with natural-looking zirconia crowns.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="service-svg-icon">
           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 16.875V21m0-4.125a3.375 3.375 0 1 1-6.75 0M13.5 16.875h3.375A3.375 3.375 0 0 0 20.25 13.5M10.125 6H13.5m-3.375 0c-.414 0-.75-.336-.75-.75V4.5c0-.414.336-.75.75-.75h3.375c.414 0 .75.336.75.75v.75c0 .414-.336.75-.75.75M10.125 6v7.875M13.5 6v7.875m-3.375 0H13.5m-3.375 0a3.375 3.375 0 0 1-3.375-3.375V7.5a3.375 3.375 0 0 1 3.375-3.375h3.375A3.375 3.375 0 0 1 16.875 7.5v2.625a3.375 3.375 0 0 1-3.375 3.375" />
@@ -41,8 +41,8 @@ export default function Services() {
       )
     },
     {
-      title: "Orthodontics",
-      description: "Align your teeth with premium clear aligners (invisible braces) or traditional ceramic/metal braces in Kuttiady.",
+      title: "Orthodontics & Invisible Aligners",
+      description: "Custom invisible clear aligners, ceramic braces, self-ligating braces, and metal braces in Kuttiady led by our MDS Orthodontist.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="service-svg-icon">
           <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm0 5.25h.007v.008H3.75V12Zm0 5.25h.007v.008H3.75v-.008Z" />
@@ -107,6 +107,15 @@ export default function Services() {
               )}
             </div>
           ))}
+        </div>
+
+        <div className="text-center" style={{ marginTop: '40px' }}>
+          <Link href="/treatments" className="btn btn-primary">
+            <span>View All Dental Treatments &amp; Specialities</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" width="16" height="16">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

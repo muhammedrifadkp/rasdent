@@ -36,10 +36,10 @@ export default function Navbar() {
   const navLinks = [
     { name: "About", href: "/#about" },
     { name: "Services", href: "/#services" },
+    { name: "Treatments", href: "/treatments" },
     { name: "Kids Dentistry", href: "/kids-dentistry" },
     { name: "Doctor", href: "/#doctor" },
     { name: "Why Us", href: "/#why-choose-us" },
-    { name: "Location", href: "/#location" },
     { name: "Contact", href: "/#contact" }
   ];
 

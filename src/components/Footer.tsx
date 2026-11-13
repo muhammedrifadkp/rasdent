@@ -62,9 +62,11 @@ export default function Footer() {
           <nav className="footer-nav">
             <Link href="/#about">About Clinic</Link>
             <Link href="/#services">Our Services</Link>
+            <Link href="/treatments">All Treatments</Link>
             <Link href="/kids-dentistry">Kids Dentistry</Link>
             <Link href="/#doctor">Meet The Doctor</Link>
             <Link href="/#why-choose-us">Why Choose Us</Link>
+            <Link href="/#faq">FAQs</Link>
             <Link href="/#location">Location</Link>
             <Link href="/#contact">Book Appointment</Link>
           </nav>
