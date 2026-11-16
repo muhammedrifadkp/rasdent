@@ -119,6 +119,17 @@ export default function Footer() {
       {/* Copyright Line */}
       <div className="footer-bottom text-center">
         <p>&copy; {currentYear} Rasdent Multi-Speciality Dental Clinic. All Rights Reserved.</p>
+        <p className="footer-credit">
+          Website by{' '}
+          <a
+            href="https://www.rifad.site"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-credit-link"
+          >
+            Muhammed Rifad
+          </a>
+        </p>
       </div>
     </footer>
   );
